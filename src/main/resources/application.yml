@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+harness:
+  model:
+    # OpenAI 兼容协议：可指向 LiteLLM / vLLM / 通义 / DeepSeek 等任意网关
+    base-url: ${LLM_BASE_URL:https://api.openai.com/v1}
+    api-key: ${LLM_API_KEY:}
+    model-name: ${LLM_MODEL:gpt-4o-mini}
+    timeout-ms: 30000
+  context:
+    max-history-rounds: 10
+    max-context-chars: 12000
+  agent:
+    max-steps: 5
+  security:
+    enabled: true
+    blocked-keywords:
+      - "DROP TABLE"
+      - "DELETE FROM"
+      - "TRUNCATE"
