@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.mediinfo</groupId>
+    <groupId>com.yzxfz</groupId>
     <artifactId>harness-demo</artifactId>
     <version>1.0.0</version>
     <name>harness-demo</name>
